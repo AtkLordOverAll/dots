@@ -40,6 +40,7 @@ alias ix=$'curl -F \'f:1=<-\' ix.io'
 alias copy-to-clipboard='xclip -selection clipboard'
 alias nay='yay -Rns'
 alias dots-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias matrix='cmatrix -b -u 10'
 
 # Warp directory (wd) AUR install
 wd() {
