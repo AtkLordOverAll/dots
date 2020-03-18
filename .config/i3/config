@@ -222,6 +222,9 @@ bindsym Print exec maim | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec maim -s | xclip -selection clipboard -t image/png
 bindsym Mod1+Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 
+# Custom window rules
+for_window [class="MEGAsync"] floating enable
+
 # For gaps
 #for_window [class="^.*"] border pixel 0
 default_border pixel 1
