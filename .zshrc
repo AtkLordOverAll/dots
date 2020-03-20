@@ -21,7 +21,7 @@ promptinit
 autoload -U colors && colors
 
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias gotop='gotop -b'
+alias gotop='ytop'
 alias reboot='sudo reboot'
 alias sleep='systemctl suspend'
 alias shutdown='shutdown now'
