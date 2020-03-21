@@ -21,7 +21,7 @@ promptinit
 autoload -U colors && colors
 
 # Load aliases if present
-[ -f '$HOME/.config/aliases' ] && source '$HOME/.config/aliases'
+[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases" || echo "Aliases not found"
 
 # Warp directory (wd) AUR install
 wd() {
