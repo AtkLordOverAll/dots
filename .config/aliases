@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Add colours where possible
+# For the ls command: -h for human readable file sizes (if used), -N for literal file names without quotes
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto"
+
+# Abbreviate common commands
+alias \
+	g='git' \
+	e='$EDITOR' \
+	f='$FILE' \
+	reboot="sudo reboot" \
+	sleep="systemctl suspend" \
+	shutdown="shutdown now" \
+	brightness="sudo brightnessctl" \
+	nvpn-c="nordvpn connect United_Kingdom" \
+	nvpn-d="nordvpn disconnect" \
+	nvpn-r="nvpn-d ; nvpn-c" \
+	nay="yay -Rns"
+
+# QoL binds
+alias \
+	update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" \
+	what-broke="sudo journalctl -b -1 -p 3" \
+	figlet="figlet -t" \
+	ix=$'curl -F \'f:1=<-\' ix.io' \
+	copy-to-clipboard="xclip -selection clipboard" \
+	dots-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' \
+	matrix="cmatrix -b -u 10"
+
+# Break old habits
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" nano="nvim"
+
+# Replacement programs that you know by another name
+command -v ytop >/dev/null && alias gotop="ytop"

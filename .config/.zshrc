@@ -20,41 +20,19 @@ promptinit
 
 autoload -U colors && colors
 
-alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias gotop='ytop'
-alias reboot='sudo reboot'
-alias sleep='systemctl suspend'
-alias shutdown='shutdown now'
-alias hibernate='systemctl hibernate'
-alias brightness='sudo brightnessctl'
-alias backup='aconfmgr -c ~/.aconfmgr save'
-alias what-broke='sudo journalctl -b -1 -p 3'
-alias what-break='sudo journalctl -b 0 -p 3'
-alias vim='nvim'
-alias nano='nvim'
-alias nvpn-c='nordvpn c United_Kingdom'
-alias nvpn-d='nordvpn d'
-alias nvpn-r='nvpn-d && nvpn-c'
-alias figlet='figlet -t'
-alias ix=$'curl -F \'f:1=<-\' ix.io'
-alias copy-to-clipboard='xclip -selection clipboard'
-alias nay='yay -Rns'
-alias dots-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias matrix='cmatrix -b -u 10'
+# Load aliases if present
+[ -f '$HOME/.config/aliases' ] && source '$HOME/.config/aliases'
 
 # Warp directory (wd) AUR install
 wd() {
   . /usr/share/wd/wd.sh
 }
 
-# Autojump (j) AUR install
-source /etc/profile.d/autojump.zsh
-
-# Fish syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # P10k manual install
 source ~/.config/p10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
+
+# Fish syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
