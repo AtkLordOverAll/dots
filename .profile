@@ -2,7 +2,7 @@
 # Runs on login, environment variables should be set here
 
 # Add ~/.local/scripts to $PATH
-export PATH="$PATH:$(du "$HOME/.local/scripts/" | cut -f2 | tr '\n' ':' | sed 's/:8$//')"
+export PATH="$PATH:$(du "$HOME/.local/scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
 # Default programs
 export EDITOR="nvim"
