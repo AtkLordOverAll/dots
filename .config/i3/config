@@ -48,7 +48,7 @@ bindsym $mod+Shift+q kill
 
 # program launcher (rofi)
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+d exec SUDO_ASKPASS=~/.config/rofi/sudo_rofi.sh rofi -show drun -run-command "sudo -A {cmd}"
+bindsym $mod+Shift+d exec rofi -show drun -run-command "sudo -A {cmd}"
 
 # change focus
 bindsym $mod+Left focus left
