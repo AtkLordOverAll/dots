@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Get a menu of emojis to copy
+
+# Check xclip is installed
+xclip -h 2>/dev/null || exit 1
+
+chosen=$(cut -d ';' -f1 ~/.local/share/emoji | dmenu -i -l 20 | sed "s/ .*//")
+
+# Quit if nothing is chosen
+[ "$chosen" = "" ] && exit
+
+echo "$chosen" | tr -d '\n' | xclip -selection clipboard
+notify-send "$chosen copied to clipboard" &
+
