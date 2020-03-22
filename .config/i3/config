@@ -236,6 +236,6 @@ gaps inner 6
 smart_gaps on
 
 # Custom programs
-exec feh --bg-center ~/.fehbg.jpg
+exec feh --bg-center ~/.config/wallpaper
 exec --no-startup-id compton
 # exec compton >~/compton-log.log 2&>1

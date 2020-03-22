@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# If given a file argument, copy it to ~/.config/wallpaper
+# If given a directory argument, pick an image from there, and copy
+# If no arguments, pick image from ~/Pictures/Wallpapers, and symlink
+# Then, set using feh
+
+pick_from_dir () {
+	IMAGE_NAME="$(find "$1" -maxdepth 1 -type f -printf %f\\n | rofi -dmenu -i -p "$1")"
+}
+
+if [ -f "$1" ] ; then
+	# Copy image file given to wallpaper (-T forces cp to treat the destination as a file, not a folder)
+	cp -T "$1" ~/.config/wallpaper
+elif [ -d "$1" ] ; then
+	# Get an image from the folder given
+	pick_from_dir $1
+	# Copy it as above
+	cp -T "$1/$IMAGE_NAME" ~/.config/wallpaper
+else
+	# Get an image from the default folder
+	pick_from_dir ~/Pictures/Wallpapers
+	# Symlink it (-s), overriding an existing file if needed (-f)
+	ln -sf "$HOME/Pictures/Wallpapers/$IMAGE_NAME" ~/.config/wallpaper
+fi
+
+feh --bg-center ~/.config/wallpaper
+
