@@ -13,7 +13,7 @@ export FILE="lf"
 export STATUSBAR="polybar"
 
 # Relocate other files
-export ZDOTDIR="$HOME/.config"
+export ZDOTDIR="$HOME/.config/zsh"
 
 # Other program settings
 export SUDO_ASKPASS="$HOME/.local/scripts/rofi_ask_pass"

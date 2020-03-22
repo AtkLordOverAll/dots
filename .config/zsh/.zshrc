@@ -1,15 +1,12 @@
 # Atk's Zoomer Shell Config
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=~/.cache/zsh-history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt autocd extendedglob nomatch
 unsetopt appendhistory beep
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/atk/.zshrc'
 
 autoload -Uz compinit promptinit
 zstyle ':completion:*' menu select
@@ -32,7 +29,8 @@ wd() {
 source ~/.config/p10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
+p10k="~/.config/zsh/p10k.zsh"
+[ -f "$p10k" ] && source "$p10k"
 
 # Fish syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
