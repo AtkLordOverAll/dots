@@ -29,7 +29,7 @@ wd() {
 source ~/.config/p10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-p10k="~/.config/zsh/p10k.zsh"
+p10k="$HOME/.config/zsh/p10k.zsh"
 [ -f "$p10k" ] && source "$p10k"
 
 # Fish syntax highlighting
