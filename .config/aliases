@@ -19,7 +19,8 @@ alias \
 	nvpn-c="nordvpn connect United_Kingdom" \
 	nvpn-d="nordvpn disconnect" \
 	nvpn-r="nvpn-d ; nvpn-c" \
-	nay="yay -Rns"
+	nay="yay -Rns" \
+	reload-zshrc="source $ZDOTDIR/.zshrc"
 
 # QoL binds
 alias \
