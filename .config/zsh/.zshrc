@@ -22,7 +22,7 @@ autoload -U colors && colors
 
 # Warp directory (wd) AUR install
 wd() {
-  . /usr/share/wd/wd.sh
+  . /home/atk/Git\ Projects/wd/wd.sh
 }
 
 # P10k manual install
