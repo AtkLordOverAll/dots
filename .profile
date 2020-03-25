@@ -13,7 +13,10 @@ export FILE="lf"
 export STATUSBAR="polybar"
 
 # Relocate other files
+# zshrc
 export ZDOTDIR="$HOME/.config/zsh"
+# warprc for wd
+export WD_CONFIG="$HOME/.config/wdrc"
 
 # Other program settings
 export SUDO_ASKPASS="$HOME/.local/scripts/rofi_ask_pass"
