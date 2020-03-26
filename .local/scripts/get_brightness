@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Requires brightnessctl to be installed
+# Retrieves brightness as a percentage
+
+echo $(brightnessctl | grep -Eo '\([0-9]{1,3}%\)' | sed -e 's/[()%]//g')
