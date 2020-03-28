@@ -24,6 +24,6 @@ else
 	ln -sf "$HOME/Pictures/Wallpapers/$IMAGE_NAME" ~/.config/wallpaper
 fi
 
-# feh --bg-center ~/.config/wallpaper
-xwallpaper --center ~/.config/wallpaper
+feh --bg-center ~/.config/wallpaper
+# xwallpaper --center ~/.config/wallpaper
 
