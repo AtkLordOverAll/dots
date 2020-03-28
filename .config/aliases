@@ -30,7 +30,8 @@ alias \
 	ix=$'curl -F \'f:1=<-\' ix.io' \
 	copy-to-clipboard="xclip -selection clipboard" \
 	dots-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' \
-	matrix="cmatrix -b -u 10"
+	matrix="cmatrix -b -u 10" \
+	zathura="zathura --fork"
 
 # Break old habits
 # Use neovim for vim if present.

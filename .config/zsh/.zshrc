@@ -22,7 +22,19 @@ autoload -U colors && colors
 
 # Warp directory (wd) AUR install
 wd() {
-  . /home/atk/Git\ Projects/wd/wd.sh
+    . /home/atk/Git\ Projects/wd/wd.sh
+}
+
+# Define the mkcd command
+mkcd() {
+    mkdir -p $1 && cd $1
+}
+
+# Define the rmout command
+rmout() {
+    DIR="$PWD"
+    cd ..
+    rm -r --interactive=once "$DIR"
 }
 
 # P10k manual install
