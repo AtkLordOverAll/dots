@@ -4,5 +4,9 @@
 # Get battery % and whether it was charging or not
 # Returns in the for +/-num e.g. -79 for discharging from 79%
 
-# echo $(acpi -b | awk -F '[,:%]' '{print ($2 == "Charging" ? "+" : "-") $3}')
-echo $(acpi -b | grep -Eo '(Disc|C)harging, [0-9]{1,3}' | sed -e 's/Discharging, /-/' -e 's/Charging, /\+/')
+for battery in /sys/class/power_supply/BAT? ; do
+	status=$(sed "s/Charging/\+/;s/Not charging/-/;s/Discharging/-/;s/Unknown/\?/" "$battery"/status)
+	charge=$(cat "$battery"/capacity)
+	echo "$status$charge"
+done
+
