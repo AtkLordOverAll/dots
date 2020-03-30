@@ -13,12 +13,24 @@ My preferred Sans Serif font is [Google's Product Sans](https://aur.archlinux.or
 * polybar
 * rofi
 * yay
-* zsh w/ [P10k](https://github.com/romkatv/powerlevel10k)
+* zsh w/ [p10k](https://github.com/romkatv/powerlevel10k)
 
 ## Scripts
 * rofi password prompt
 * rofi emoji picker (stolen from [here](https://github.com/LukeSmithxyz/voidrice/blob/master/.local/bin/dmenuunicode))
 * rofi wallpaper picker (sets using feh)
+
+## My program setup
+
+**DE/WM**: i3-gaps
+**Bar**: polybar
+**Theme** (GTK2/3): Zukitwo-dark
+**Icons** (GTK2/3): Papirus-Dark
+**Cursor**: Breeze
+**Terminal**: kitty
+**Notifications**: dunst
+**Login Manager**: ly
+**File Manager**: lf/Thunar
 
 ## How to use my dots
 I would recommend cloning using this command:
