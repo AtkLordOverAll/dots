@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "350x5-0+24"
+    geometry = "650x5-20+20"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -51,13 +51,13 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 3
 
     # Padding between text and separator.
-    padding = 0
+    padding = 3
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 3
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Monospace 14
+    font = Serif 8
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -149,13 +149,13 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = true
+    stack_duplicates = false
 
     # Hide the count of stacked notifications with the same content
-    hide_duplicate_count = false
+    hide_duplicate_count = true
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = no
 
     ### Icons ###
 
@@ -209,11 +209,12 @@
     verbosity = mesg
 
     # Define the corner radius of the notification window
+
     # in pixel size. If the radius is 0, you have no rounded
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 2
 
     ### Legacy
 
@@ -275,22 +276,24 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282828"
-    foreground = "#888888"
+    background = "#222222"
+    foreground = "#dfdfdf"
+    frame_color = "#686868"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#282828"
-    foreground = "#888888"
+    background = "#222222"
+    foreground = "#dfdfdf"
+    frame_color = "#686868"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#888888"
+    background = "#222222"
+    foreground = "#dfdfdf"
     frame_color = "#DC2D02"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
