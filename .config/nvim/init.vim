@@ -4,6 +4,12 @@ set number
 " Default encoding
 set encoding=utf-8
 
+" 4 space tabs
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
