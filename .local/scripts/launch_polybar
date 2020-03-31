@@ -6,13 +6,10 @@ killall -q polybar
 # wait for killing
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# if I get an argument, assume it's the window manager being changed
-[ $# -eq 0 ] || sed -i.last "s/modules-left = .*$/modules-left = $1/" $HOME/.config/polybar/config
-
-# launch bar(s) on every monitor
+# launch bar(s) on every monitor, take first arg as WM env var so polybar loads the correct WM's modules
 echo "---" | tee -a /tmp/polybar.log
 for m in $(polybar -m | cut -d ":" -f1); do
-    MONITOR=$m polybar --reload bottombar >> /tmp/polybar$m.log 2>&1 &
+    MONITOR=$m WM=$1 polybar --reload bottombar >> /tmp/polybar$m.log 2>&1 &
 done
 
 echo "Bar(s) launched"

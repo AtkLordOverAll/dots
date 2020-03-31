@@ -214,7 +214,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id launch_polybar i3
 
 # Custom binds
 bindsym $mod+l exec i3lock -ec 555558 --nofork
