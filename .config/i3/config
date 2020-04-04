@@ -47,8 +47,8 @@ bindsym $mod+Return exec kitty -T Kitty
 bindsym $mod+Shift+q kill
 
 # program launcher (rofi)
-bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+d exec rofi -show drun -run-command "sudo -A {cmd}"
+bindsym $mod+d exec launcher
+bindsym $mod+Shift+d exec USE_SUDO=true launcher
 
 # change focus
 bindsym $mod+Left focus left
