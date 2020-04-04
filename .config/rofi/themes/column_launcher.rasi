@@ -39,7 +39,7 @@ configuration {
 
 /* -- Dark -- */
 * {
-    background:                     #212121ff;
+    background:                     #212121FF;
     background-alt:                 #212121ff;
     background-ib:                  #151515FF;
     foreground:                     #EDEDEDFF;
@@ -56,10 +56,10 @@ window {
     border:                  		0px;
     border-radius:                  0px;
     border-color:                  	@border;
-    height:                         100%;
+    height:                         1052px;
     width:                          10%;
-    location:                       east;
-    anchor:                         east;
+    location:                       north east;
+    anchor:                         north east;
     x-offset:                       0;
     y-offset:                       0;
 }
