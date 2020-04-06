@@ -16,10 +16,8 @@ alias \
 	sleep="systemctl suspend" \
 	shutdown="shutdown now" \
 	brightness="sudo brightnessctl" \
-	nvpn-c="nordvpn connect United_Kingdom" \
-	nvpn-d="nordvpn disconnect" \
-	nvpn-r="nvpn-d ; nvpn-c" \
 	nay="yay -Rns" \
+    nord="nordvpn" \
 	reload-zshrc="source $ZDOTDIR/.zshrc"
 
 # QoL binds
