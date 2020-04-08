@@ -18,9 +18,9 @@ promptinit
 autoload -U colors && colors
 
 # Load aliases if present
-[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases" || echo "Aliases not found"
+[ -f "$HOME/.config/zsh/aliases" ] && source "$HOME/.config/zsh/aliases" || echo "Aliases not found"
 
-# Warp directory (wd) AUR install
+# Warp directory (wd) Git install (my fork)
 wd() {
     . /home/atk/Git\ Projects/wd/wd.sh
 }
@@ -34,8 +34,26 @@ mkcd() {
 rmout() {
     DIR="$PWD"
     cd ..
-    rm -r --interactive=once "$DIR"
+    rm -rfv --interactive=once "$DIR"
 }
+
+## Dots management
+_dots-git() {
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
+}
+
+# Wraps around the bare git directory, tactically using stash to hide LICENSE and README files
+dots-git() {
+    case $1 in
+        commit) [ -f ~/LICENSE ] && rm ~/LICENSE \
+            ; [ -f ~/REAME.md ] && rm ~/README.md \
+            ; _dots-git stash push -q ~/LICENSE ~/README.md \
+            && _dots-git "$@" \
+            && _dots-git stash pop -q ;;
+        *) _dots-git "$@"
+    esac
+}
+##
 
 # P10k manual install
 source ~/.config/p10k/powerlevel10k.zsh-theme
