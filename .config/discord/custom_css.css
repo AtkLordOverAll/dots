@@ -1,0 +1,9 @@
+::placeholder,
+body,
+button,
+input,
+select,
+textarea {
+  /* Replace 'Inter' with the font of your choosing */
+  font-family: 'Google Sans', sans-serif;
+}
