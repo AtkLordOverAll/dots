@@ -19,7 +19,7 @@ alias \
 	nay="yay -Rns" \
     nord="nordvpn" \
 	reload-zshrc="source $ZDOTDIR/.zshrc" \
-    night_mode="redshift >/dev/null 2&>1 &"
+    night_mode="pgrep redshift >/dev/null 2&>1 || redshift >/dev/null 2&>1 &"
 
 # QoL binds
 alias \
