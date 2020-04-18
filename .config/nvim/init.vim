@@ -25,4 +25,4 @@ autocmd BufRead,BufNewFile *.Rmd,*.rmd,*.md set filetype=markdown
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Compile document, be it groff/LaTeX/markdown/etc.
-map <leader>c :w! \| !compiler <c-r>%<CR>
+map <leader>c :w! \| !markdown_compiler <c-r>%<CR>
