@@ -47,8 +47,8 @@ bindsym $mod+Return exec kitty -T Kitty
 bindsym $mod+Shift+q kill
 
 # program launcher (rofi)
-bindsym $mod+d exec launcher
-bindsym $mod+Shift+d exec USE_SUDO=true launcher
+bindsym $mod+d exec rofi_launcher
+bindsym $mod+Shift+d exec USE_SUDO=true rofi_launcher
 
 # change focus
 bindsym $mod+Left focus left
@@ -224,6 +224,7 @@ bindsym Mod1+Print exec maim -i $(xdotool getactivewindow) | xclip -selection cl
 
 # Custom window rules
 for_window [class="MEGAsync"] floating enable
+for_window [class="Loading Tixati..."] floating enable
 
 # For gaps
 #for_window [class="^.*"] border pixel 0
