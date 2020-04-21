@@ -13,7 +13,7 @@
 	"batchinstall": true,
 	"answerclean": "NotInstalled",
 	"answerdiff": "None",
-	"answeredit": "",
+	"answeredit": "NotInstalled",
 	"answerupgrade": "",
 	"gitbin": "git",
 	"gpgbin": "gpg",
@@ -37,7 +37,7 @@
 	"upgrademenu": true,
 	"cleanmenu": false,
 	"diffmenu": false,
-	"editmenu": false,
+	"editmenu": true,
 	"combinedupgrade": false,
 	"useask": false
 }
