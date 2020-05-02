@@ -225,6 +225,7 @@ bindsym Mod1+Print exec maim -i $(xdotool getactivewindow) | xclip -selection cl
 # Custom window rules
 for_window [class="MEGAsync"] floating enable
 for_window [class="Loading Tixati..."] floating enable
+for_window [class="Microsoft Teams Notification"] floating enable
 
 # For gaps
 #for_window [class="^.*"] border pixel 0
