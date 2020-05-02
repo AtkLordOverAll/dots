@@ -1,3 +1,5 @@
 # A && B || C is not if-then-else
 disable=SC2015
+# This is a file redirection. Was it supposed to be a comparison or fd operation?
+disable=SC2210
 
