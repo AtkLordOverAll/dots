@@ -55,7 +55,7 @@ padding-right = 1
 module-margin = 2
 
 font-0 = GoogleSans-Regular:size=10;2
-font-1 = FiraCode Nerd Font Mono:size=14;3
+font-1 = JetBrainsMonoMedium Nerd Font Mono:size=14;3
 
 ; Change left modules dynamically based on WM env variable, fallback on loading everything
 modules-left = ${env:WM:i3 bspwm}
