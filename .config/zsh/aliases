@@ -25,12 +25,14 @@ alias \
 # QoL binds
 alias \
 	update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" \
+    update-mirrors="sudo reflector --protocol https --country 'United Kingdom' --latest 200 --age 24 --sort rate --save /etc/pacman.d/mirrorlist" \
 	what-broke="sudo journalctl -b -1 -p 3" \
 	figlet="figlet -t" \
 	ix=$'curl -F \'f:1=<-\' ix.io' \
 	copy-to-clipboard="xclip -selection clipboard" \
 	matrix="cmatrix -b -u 10" \
-	zathura="zathura --fork"
+	zathura="zathura --fork" \
+    window-name="xprop | grep -E '^WM_((CLASS)|(NAME))'"
 
 # Break old habits
 # Use neovim for vim if present.
