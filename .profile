@@ -6,7 +6,7 @@ export PATH="$PATH:$(du "$HOME/.local/scripts" "$HOME/.local/bin" | cut -f2 | tr
 
 # Default programs
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="st"
 export BROWSER="firefox"
 export READER="mupdf"
 export FILE="lf"
