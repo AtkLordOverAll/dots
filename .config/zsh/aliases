@@ -13,8 +13,10 @@ alias \
 	e='$EDITOR' \
 	f='$FILE' \
 	reboot="sudo reboot" \
-	sleep="systemctl suspend" \
+	sleep="systemctl suspend-then-hibernate" \
 	shutdown="shutdown now" \
+    hibernate="systemctl hibernate" \
+    hybrid-sleep="systemctl hybrid-sleep" \
 	brightness="sudo brightnessctl" \
 	nay="yay -Rns" \
     nord="nordvpn" \
