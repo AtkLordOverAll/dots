@@ -60,7 +60,7 @@ I would recommend cloning using this command:
 git clone --depth 1 [HTTPS/SSH link]
 ```
 
-This'll get you my dots downloaded without the README & LICENSE and with no unnecessary history.
+This'll get you my dots downloaded with no unnecessary history.
 From there, copy the files or symlink them with `ln -sf` to get yourself up and running.
 It's always well worth a **re-log if you change `.profile`** (be it editing mine or replacing yours with mine)
 
