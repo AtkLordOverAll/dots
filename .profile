@@ -2,13 +2,13 @@
 # Runs on login, environment variables should be set here
 
 # Add ~/.local/scripts to $PATH
-export PATH="$PATH:$(du "$HOME/.local/scripts" "$HOME/.local/bin" "$HOME/.cargo/bin" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+export PATH="$PATH:$(du "$HOME/.local/scripts" "$HOME/.local/bin" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
-export READER="mupdf"
+export READER="zathura"
 export FILE="lf"
 export STATUSBAR="polybar"
 
@@ -24,4 +24,3 @@ export LF_ICONS="di=:fi=:ln=:or=:ex=:*.c=:*.cc=:*.clj=:*
 
 # Set wallpaper
 xwallpaper --center ~/.config/wallpaper
-
