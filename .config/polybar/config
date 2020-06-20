@@ -263,9 +263,9 @@ interval = 5
 label-muted = ﱝ Mute
 ;label-muted-foreground = #666
 
-ramp-volume-0 = 奄
-ramp-volume-1 = 奔
-ramp-volume-2 = 墳
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 click-right = pavucontrol &
 click-middle = pavucontrol &
