@@ -2,7 +2,7 @@
 # Runs on login, environment variables should be set here
 
 # Add ~/.local/scripts to $PATH
-export PATH="$PATH:$(du "$HOME/.local/scripts" "$HOME/.local/bin" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+export PATH="$PATH:$(du "$HOME/.local/scripts" "$HOME/.local/bin" "$HOME/.cargo/bin" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
 # Default programs
 export EDITOR="nvim"
@@ -17,6 +17,11 @@ export STATUSBAR="polybar"
 export ZDOTDIR="$HOME/.config/zsh"
 # warprc for wd
 export WD_CONFIG="$HOME/.config/wdrc"
+
+# zsh-autosuggestions
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+export ZSH_AUTOSUGGEST_COMPLETION_IGNORE="yay *"
 
 # Other program settings
 export SUDO_ASKPASS="$HOME/.local/scripts/rofi_ask_pass"

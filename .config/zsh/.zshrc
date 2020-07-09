@@ -55,6 +55,13 @@ dots-git() {
 }
 ##
 
+# You Should Use AUR install
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+
+# zsh autosuggestions (official repos) install
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+bindkey '^ ' autosuggest-toggle # Ctrl + Space toggles suggestions
+
 # P10k manual install
 source ~/.config/p10k/powerlevel10k.zsh-theme
 
