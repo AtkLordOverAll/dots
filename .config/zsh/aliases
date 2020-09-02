@@ -9,9 +9,6 @@ alias \
 
 # Abbreviate common commands
 alias \
-	g='git' \
-	e='$EDITOR' \
-	f='$FILE' \
 	reboot="sudo reboot" \
 	sleep="systemctl suspend-then-hibernate" \
 	shutdown="shutdown now" \
@@ -36,9 +33,6 @@ alias \
 	zathura="zathura --fork" \
     window-name="xprop | grep -E '^WM_((CLASS)|(NAME))'"
 
-# Break old habits
-# Use neovim for vim if present.
-command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" nano="nvim"
-
 # Replacement programs that you know by another name
 command -v ytop >/dev/null && alias gotop="ytop"
+
