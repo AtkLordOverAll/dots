@@ -16,6 +16,7 @@ alias \
     hybrid-sleep="systemctl hybrid-sleep" \
 	brightness="sudo brightnessctl" \
 	nay="yay -Rns" \
+    yargo="cargo install-update -a" \
     nord="nordvpn" \
 	reload-zshrc="source $ZDOTDIR/.zshrc" \
     night_mode="pgrep redshift >/dev/null 2>&1 || { redshift >/dev/null 2>&1 & disown ; }" \
