@@ -31,5 +31,5 @@ export LF_ICONS="di=:fi=:ln=:or=:ex=:*.c=:*.cc=:*.clj=:*
 xwallpaper --center ~/.config/wallpaper >/dev/null 2>&1
 
 # Start redshift if needed
-[ "$(date +%H)" -ge "22" ] && pgrep redshift >/dev/null 2>&1 || { redshift >/dev/null 2>&1 & disown ; }
+[ "$(date +%H)" -ge "22" ] && pgrep redshift >/dev/null 2>&1 || { redshift -c "$HOME/.config/redshift/redshift.conf" >/dev/null 2>&1 & disown ; }
 
