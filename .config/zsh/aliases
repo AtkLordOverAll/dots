@@ -15,7 +15,8 @@ alias \
     hibernate="systemctl hibernate" \
     hybrid-sleep="systemctl hybrid-sleep" \
     brightness="sudo brightnessctl" \
-	  nay="yay -Rns" \
+	  nay="paru -Rns" \
+    naru="paru -Rns"
     yargo="rustup update ; cargo install-update -a" \
     nord="nordvpn" \
 	  reload-zshrc="source $ZDOTDIR/.zshrc" \
@@ -36,4 +37,5 @@ alias \
 
 # Replacement programs that you know by another name
 command -v ytop >/dev/null && alias gotop="ytop"
+command -v yay  >/dev/null && alias yay="paru"
 
