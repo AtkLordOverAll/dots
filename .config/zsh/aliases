@@ -16,7 +16,7 @@ alias \
     hybrid-sleep="systemctl hybrid-sleep" \
     brightness="sudo brightnessctl" \
 	  nay="paru -Rns" \
-    naru="paru -Rns"
+    naru="paru -Rns" \
     yargo="rustup update ; cargo install-update -a" \
     nord="nordvpn" \
 	  reload-zshrc="source $ZDOTDIR/.zshrc" \
